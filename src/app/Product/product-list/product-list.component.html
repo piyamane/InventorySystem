@@ -1,0 +1,45 @@
+<div class="list row">
+    <div class="col-md-12">
+     <h4>Product List</h4>
+     <div class="form-group">
+        <button class="btn btn-success btn-lg float-center margin-bottom:4px; alignright"
+        (click)="openAddProductDialog()">
+             Add
+        </button>
+      </div>
+      <div class='panel panel-primary mtop10 '>    
+        <div class='panel-body '>  
+            <div class='table-responsive'>  
+                <table class='table p' style="width:100%">  
+                    <thead>  
+                        <tr>  
+                            <th>Name</th>  
+                            <th>Desctiption</th>  
+                            <th>Quantity</th>  
+                            <th>Price</th>
+                            <th>Action</th>  
+                        </tr>  
+                    </thead>  
+                    <tbody>  
+                        <tr *ngFor="let product of productList;">  
+                            <td>{{product.product_name}}</td>  
+                            <td>{{product.product_description}}</td>  
+                            <td>{{product.product_qty}}</td>  
+                            <td>{{product.product_price}}</td>  
+                            <td>  
+                                <button (click)="deleteProduct(product)" style="margin-right: 2px; margin-bottom: 2px;" class="btn btn-info"
+                                (click)="deleteProduct(product)"> Delete</button> 
+                                <button (click)="editProduct(product)" style="margin-left: 8px;" class="btn btn-info" (click)="viewEditModal(product)"> Edit</button>  
+                                
+                              </td>  
+                        </tr>  
+                    </tbody>  
+                </table>  
+            </div>  
+        </div>  
+    </div>  
+    </div>
+    <div class="col-md-6">
+      
+     </div>
+  </div>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+	<div class="container">
+		<h1 style="text-align:center;color:black;">
+		Add Product
+	</h1>
+		<form [formGroup]="addProductForm">
+            <div class="modal-header">
+                <h6 class="modal-title" id="addProductLabel">Enter Product Information</h6>
+                <button
+                  type="button"
+                  class="close pull-right"
+                  aria-label="Close"
+                  (click)="bsModalRef.hide()"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+			<div class="form-group">
+				<label for="">Product Name:</label>
+				<input class="form-control"
+					type="text"
+                    formControlName="ProductName"
+					placeholder="Enter Product Name">
+			</div>
+            <div class="form-group">
+				<label for="">Product Description:</label>
+				<input class="form-control"
+					type="text"
+                    formControlName="Description"
+					placeholder="Enter Product Description">
+			</div>
+            <div class="form-group">
+				<label for="">Product Quantity:</label>
+				<input class="form-control"
+					type="text"
+                    formControlName="Quantity"
+					placeholder="Enter Product Quantity">
+			</div>
+            <div class="form-group">
+				<label for="">Product Price:</label>
+				<input class="form-control"
+					type="text"
+                    formControlName="Price"
+					placeholder="Enter Product Price">
+			</div>
+			<div class="form-group">
+				
+			</div>
+            <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-primary pull-right"
+                  aria-label="Save"
+                  (click)="addProduct()"
+                >
+                  Save
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-primary pull-right"
+                  aria-label="Close"
+                  (click)="bsModalRef.hide()"
+                >
+                  Close
+                </button>
+              </div>
+		</form>
+	</div>
+</body>
+
+</html>
